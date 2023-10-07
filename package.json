@@ -1,0 +1,25 @@
+{
+  "name": "graphql-book-reader",
+  "version": "1.0.0",
+  "description": "A GraphQL server and a React application for interactive book reading.The GraphQL server fetches book data,including both original book text and tokenized text.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariaGKimani/GraphQL-book-reader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariaGKimani/GraphQL-book-reader/issues"
+  },
+  "homepage": "https://github.com/MariaGKimani/GraphQL-book-reader#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0"
+  }
+}
