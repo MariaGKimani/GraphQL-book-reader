@@ -1,0 +1,110 @@
+/* styles.css */
+
+body {
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.fixed{
+  position: fixed;
+  margin-left: -10cm;
+  margin-top: -10cm;
+}
+.double-page-container {
+  display: flex;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  margin-top: -17%;
+  margin-right: 370px;
+  /* margin-left: 70px; */
+  z-index: 9;
+}
+img {
+  margin-top: -10cm;
+  margin-left: -24cm;
+  width: 50cm;
+  height: auto;
+  position: absolute;
+  position: fixed !important;
+  z-index: -3;
+}
+.book {
+  margin-bottom: 10cm !important;
+  margin-left: 3cm;
+
+}
+
+.left-page > p{
+  width: 10cm;
+  margin-right: 9%;
+  height: 1cm;
+}
+
+.right-page > p{
+  width: 10cm;
+  margin-right: 9%;
+  height: 1cm;
+}
+.left-page {
+  padding: 100px 0px 120px 80px;
+}
+.right-page {
+  padding: 100px 120px 120px 250px;
+}
+
+h2 {
+  color: #1518dd; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+}
+
+h3 {
+  color: #555; 
+  margin-top: 0;
+  font-size: 20px;
+}
+
+button {
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 5em;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: rgb(243, 139, 101); 
+  color: black;
+  font-size: 20px;
+}
+.left-page-index{
+  position: absolute;
+  padding-left: 12cm;
+  top: 7.7cm;
+  font-size: medium;
+  font-weight: 100;
+  position: fixed;
+}
+
+.right-page-index{
+  position: absolute;
+  padding-left: 27cm;
+  top: 8.0cm;
+  font-size: medium;
+  font-weight: 100;
+}
+.book-categories{
+ gap: 10px;
+ margin-left: 32em;
+ display: flex;
+}

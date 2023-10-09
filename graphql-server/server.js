@@ -1,6 +1,7 @@
 var express = require('express');
 var { graphqlHTTP } = require('express-graphql');
 var {buildSchema} = require('graphql');
+const cors = require('cors');
 
 // GraphQL Schema
 //the return type of message is  a string
@@ -8821,6 +8822,8 @@ const root = {
 
 // Setting up the express server and attach a GraphQL endpoint to the server
 var app = express();
+app.use(cors());
+
 app.use('/graphql', graphqlHTTP({
     schema : schema, 
     rootValue : root,
@@ -8828,4 +8831,4 @@ app.use('/graphql', graphqlHTTP({
 }));
 
 // start up server
-app.listen(4001, () => console.log('Express GraphQL Server Now Running On localhost:4005/graphql'));
+app.listen(4002, () => console.log('Express GraphQL Server Now Running On localhost:4001/graphql'));
