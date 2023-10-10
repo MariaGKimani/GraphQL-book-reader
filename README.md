@@ -55,3 +55,13 @@ git push origin feature/your-feature-name
 ```
 
 5. Create a pull request on the original repository.
+
+   
+
+
+
+
+## Completion
+This is a preview of the complete React website with the two books
+[Screencast from 10-10-2023 06:06:01 ALASIRI.webm](https://github.com/MariaGKimani/GraphQL-book-reader/assets/124131433/2ed7231c-b7e4-4838-98de-30ff8edbab80)
+
