@@ -1,5 +1,5 @@
-
 name: Backend CI/CD Pipeline
+
 on:
   push:
     branches:
@@ -11,24 +11,34 @@ on:
       - main
       - staging
       - dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Change to the Node.js version you want, e.g., '16'
+
       - name: Set Python version
         run: echo "Using Python version 3.9"
+
       - name: Check Syntax
         run: pre-commit run --all-files
+
       - name: Make Migrations
         run: python manage.py makemigrations
+
       - name: Migration
-        run: 
-          python3 manage.py migrate
+        run: python3 manage.py migrate
+
       - name: Run server
-        run: 
-          python3 manage.py runserver
+        run: python3 manage.py runserver
+
       - name: Run Tests
-        run: 
-          python manage.py test
+        run: python manage.py test
