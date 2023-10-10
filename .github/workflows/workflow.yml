@@ -17,6 +17,9 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+      - name: Check Python versions
+        run: python --version
+        
       - name: Checkout code
         uses: actions/checkout@v2
 
