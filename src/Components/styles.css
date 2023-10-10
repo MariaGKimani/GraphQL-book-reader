@@ -1,7 +1,4 @@
-/* styles.css */
-
 body {
-
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -23,7 +20,7 @@ body {
   max-width: 800px;
   margin-top: -17%;
   margin-right: 370px;
-  /* margin-left: 70px; */
+
   z-index: 9;
 }
 img {
@@ -38,7 +35,6 @@ img {
 .book {
   margin-bottom: 10cm !important;
   margin-left: 3cm;
-
 }
 
 .left-page > p{
