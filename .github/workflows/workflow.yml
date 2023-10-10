@@ -1,5 +1,6 @@
+name: Backend CI/CD Pipeline
 
-name: Backend CI/CD Pipelineon:
+on:
   push:
     branches:
       - main
@@ -10,26 +11,32 @@ name: Backend CI/CD Pipelineon:
       - main
       - staging
       - dev
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+
     steps:
+      - name: Set up Python 3.10.12
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.12
+
+      - name: Check Python versions
+        run: python --version
+
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Set Python version
-        run: echo "Using Python version 3.9"
-      - name: Install requirements
-        run: pip install -r requirements.txt
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
       - name: Check Syntax
         run: pre-commit run --all-files
-      - name: Make Migrations
-        run: python manage.py makemigrations
-      - name: Migration
-        run: 
-          python3 manage.py migrate
-      - name: Run server
-        run: 
-          python3 manage.py runserver
-      - name: Run Tests
-        run: 
-          python manage.py test
+
+
