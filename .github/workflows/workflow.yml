@@ -34,7 +34,7 @@ jobs:
           node-version: '18'
 
       - name: Install pre-commit
-        run: sudo apt install pre-commit
+        run: pip install pre-commit
 
       - name: Check Syntax
         run: pre-commit run --all-files
