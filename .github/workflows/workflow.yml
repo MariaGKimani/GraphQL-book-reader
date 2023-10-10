@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install pre-commit
+        run: pip install pre-commit
+
       - name: Set Python version
         run: echo "Using Python version 3.10"
 
