@@ -15,16 +15,14 @@ body {
 }
 .double-page-container {
   display: flex;
-  padding: 20px;
   border-radius: 5px;
   max-width: 800px;
   margin-top: -17%;
   margin-right: 370px;
-
   z-index: 9;
 }
 img {
-  margin-top: -10cm;
+  margin-top: -11.5cm;
   margin-left: -24cm;
   width: 50cm;
   height: auto;
@@ -33,36 +31,33 @@ img {
   z-index: -3;
 }
 .book {
-  margin-bottom: 10cm !important;
-  margin-left: 3cm;
-}
-
-.left-page > p{
-  width: 10cm;
-  margin-right: 9%;
-  height: 1cm;
-}
-
-.right-page > p{
-  width: 10cm;
-  margin-right: 9%;
-  height: 1cm;
+  margin-bottom: 12cm !important;
+  margin-left: 1cm;
 }
 .left-page {
   padding: 100px 0px 120px 80px;
+  margin-left: -1cm;
+}
+.left{
+  margin-top: -15px;
+  width: 28em;
 }
 .right-page {
-  padding: 100px 120px 120px 250px;
+  padding: 100px 120px 220px 250px;
+  margin-left: -2.0cm;
+}
+.right{
+  width: 28em;
 }
 
 h2 {
-  color: #1518dd; 
+  color: #1518dd;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
 }
 
 h3 {
-  color: #555; 
+  color: #555;
   margin-top: 0;
   font-size: 20px;
 }
@@ -79,14 +74,14 @@ button {
 }
 
 button:hover {
-  background-color: rgb(243, 139, 101); 
+  background-color: rgb(243, 139, 101);
   color: black;
   font-size: 20px;
 }
 .left-page-index{
   position: absolute;
-  padding-left: 12cm;
-  top: 7.7cm;
+  padding-left: 12.0cm;
+  top: 8.5cm;
   font-size: medium;
   font-weight: 100;
   position: fixed;
@@ -94,13 +89,222 @@ button:hover {
 
 .right-page-index{
   position: absolute;
-  padding-left: 27cm;
-  top: 8.0cm;
+  padding-left: 27.0cm;
+  top: 8.5cm;
   font-size: medium;
   font-weight: 100;
 }
 .book-categories{
  gap: 10px;
- margin-left: 32em;
+ margin-top: 1cm;
+ margin-left: 31em;
  display: flex;
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .double-page-container {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  img {
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    position: static;
+    z-index: auto;
+  }
+
+  .book {
+    margin-left: 0;
+  }
+
+  .left-page,
+  .right-page {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .book-categories {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+
+  .double-page-container {
+
+    padding: 10px;
+    margin-top: -10%;
+    margin-right: 200px;
+  }
+
+  img {
+
+    width: 40cm;
+    margin-top: -8cm;
+    margin-left: -20cm;
+  }
+
+  .book {
+
+    margin-left: 1cm;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+
+    font-size: 20px;
+  }
+
+  .double-page-container {
+
+    padding: 10px;
+    margin-top: -10%;
+    margin-right: 200px;
+  }
+
+  img {
+
+    width: 40cm;
+    margin-top: -8cm;
+    margin-left: -20cm;
+  }
+
+  .book {
+
+    margin-left: 1cm;
+  }
+  .left-page-index{
+    position: absolute;
+    padding-left: 10cm;
+    top: 3.4cm;
+    font-size: medium;
+    font-weight: 100;
+    position: fixed;
+  }
+
+  .right-page-index{
+    position: absolute;
+    padding-left: 22cm;
+    top: 3.4cm;
+    font-size: medium;
+    font-weight: 100;
+  }
+  .left-page > p{
+    width: 7cm;
+    margin-right: 5%;
+    height: 1cm;
+  }
+
+  .right-page > p{
+    width: 9cm;
+    margin-right: 2%;
+    height: 1cm;
+  }
+}
+
+/* form */
+.form-popup.active {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid navy;
+  /* border: none; */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 40%;
+  width: 400px;
+  z-index: 9999;
+}
+.form-popup.active h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.form-popup.active button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  display: block;
+  margin-left: 40%;
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+}
+.book-container.dimmed {
+  filter: blur(2px);
+  pointer-events: none;
+}
+.overlay.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+.form-popup.active {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 50%;
+  /* margin-top: 8cm; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+  width: 400px;
+  z-index: 9999;
+}
+
+/* Style for the form heading */
+.form-popup.active h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+
+.form-popup.active button:hover {
+  background-color: darkblue;
+}
+.book-container.dimmed {
+  filter: blur(2px);
+  pointer-events: none;
+}
+.overlay.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+.value {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 1.5cm 2.5cm;
+  height: 40px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 0px;
+}
+
