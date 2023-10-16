@@ -1,10 +1,9 @@
 # GraphQL-book-reader
+A GraphQL server and a React application for interactive book reading.The GraphQL server fetches book data,including both original book text and tokenized text.
 
 ## Overview
 
-Welcome to GraphQL-book-reader repository. This repository contains the backend code for...............................
-
-
+Welcome to GraphQL-book-reader repository.
 
 ## Getting Started
 - To set up and run the Backend on your local development environment,
@@ -56,7 +55,7 @@ git push origin feature/your-feature-name
 
 5. Create a pull request on the original repository.
 
-   
+
 
 
 
